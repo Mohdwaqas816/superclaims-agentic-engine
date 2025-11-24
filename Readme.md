@@ -61,6 +61,19 @@ superclaims Engine/
 └── .env.example
 ```
 
+## AI tool usage
+
+MockLLM — deterministic synthetic responses for local testing.
+
+##### Suggested
+
+To wire a real LLM (Groq default):
+
+1.  Create an account on Groq (Llama) here is the [link](https://console.groq.com/)
+2.  Create API keys (Llama gives good free tier tokens and API calls good for testing purpose) Doc [link](https://console.groq.com/docs/overview)
+3.  Attach API key in .env
+4.  You are good to hit the API :clinking_glasses:
+
 ## How to run in local
 
 1. Clone the project
@@ -90,19 +103,6 @@ superclaims Engine/
    -F "files=@/path/to/discharge.pdf" \
    -F "files=@/path/to/id.pdf"
    ```
-
-## AI tool usage
-
-MockLLM — deterministic synthetic responses for local testing.
-
-##### Suggested
-
-To wire a real LLM (Groq default):
-
-1.  Create an account on Groq (Llama) here is the [link](https://console.groq.com/)
-2.  Create API keys (Llama gives good free tier tokens and API calls good for testing purpose) Doc [link](https://console.groq.com/docs/overview)
-3.  Attach API key in .env
-4.  You are good to hit the API :clinking_glasses:
 
 ## Prompts (examples used in code)
 
