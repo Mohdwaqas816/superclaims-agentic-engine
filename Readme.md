@@ -15,6 +15,22 @@ Key points:
 
 <img width="517" height="891" alt="superclaims-engine-architecture" src="https://github.com/user-attachments/assets/4c4a303f-8d56-4573-8106-8db785a7fb1c" />
 
+## Pre-requisites
+
+<details open>
+<summary>Python 3.10 - 3.12</summary>
+<br>
+
+- [Python Download](https://www.python.org/downloads/)
+
+</details>
+<details open>
+<summary>Code Editor (Preferred)</summary>
+<br>
+
+- [VS Code Download](https://code.visualstudio.com/download)
+</details>
+
 ### Folder structure
 
 ```
@@ -47,21 +63,27 @@ superclaims Engine/
 
 ## How to run in local
 
-1. Create virtualenv & install dependencies:
+1. Clone the project
+
+   ```bash
+   git https://github.com/Mohdwaqas816/superclaims-agentic-engine.git
+   ```
+
+2. Create virtualenv & install dependencies For reference follow [link](https://virtualenv.pypa.io/en/latest/user_guide.html):
 
    ```bash
    python -m venv .venv
-   source .venv/bin/activate
+   .venv/Scripts/activate   # for windows
    pip install -r requirements.txt
    ```
 
-2. Run:
+3. Run uvicorn server:
 
    ```bash
    uvicorn app.main:app --reload
    ```
 
-3. Test with curl or Postman upload multi-part form to POST /process-claim. Example using curl (replace files):
+4. Test with curl or Postman upload multi-part form to POST /process-claim. Example using curl (replace files):
    ```bash
    curl -X POST "http://127.0.0.1:8000/process-claim" \
    -F "files=@/path/to/bill.pdf" \
