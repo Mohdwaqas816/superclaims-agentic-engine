@@ -197,3 +197,16 @@ Return JSON only.
   }
 }
 ```
+
+### Limitations
+
+1. Data is not persistent
+2. Application is not deployed (can only work in local as of now)
+3. LLM comes with certain restriction based on tokens and API calls limit, rigorous testing is not advised in free tier
+
+### Future plan
+
+1. Deployment of application
+2. Data persistent using postgresql (Metadata storage)
+3. In-memory caching using Redis to minimize latency and avoid LLM call for the same repeated document
+4. Document storage using S3 bucket
